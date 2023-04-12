@@ -17,7 +17,7 @@ public class Servidor extends Thread {
             in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             out = new PrintWriter(con.getOutputStream(), true);
         } catch (IOException ioe) {
-            System.err.println("Problemas de IO");
+            System.out.println("Excecao: " + ioe.getMessage());
         }
     }
 
@@ -29,7 +29,7 @@ public class Servidor extends Thread {
                 System.out.println(mensagem);
             }
         } catch (IOException ioe) {
-            System.err.println("Problemas de IO");
+            System.out.println("Excecao: " + ioe.getMessage());
         }
     }
 }

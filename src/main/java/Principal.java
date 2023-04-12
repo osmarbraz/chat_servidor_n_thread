@@ -15,8 +15,8 @@ public class Principal {
                 cliente.start();
                 System.err.println("Chegou um cliente!");
             }
-        } catch (IOException e) {
-            System.err.println("Problemas de IO");
+        } catch (IOException ioe) {
+             System.out.println("Excecao: " + ioe.getMessage());
         }
     }
 }
